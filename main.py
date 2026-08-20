@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.get("/")
 def hello():
-    """Return a friendly HTTP greeting. """
+    """Return a friendly HTTP greeting."""
     who = request.args.get("who", default="World")
     return f"Hello {who}!\n"
 
