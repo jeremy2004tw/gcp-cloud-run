@@ -35,10 +35,9 @@ on:
       - '"main"'
 
 env:
-  PROJECT_ID: 'my-project' # TODO: update to your Google Cloud project ID
+  PROJECT_ID: 'terraform-demo-504200' # TODO: update to your Google Cloud project ID
   REGION: 'us-central1' # TODO: update to your region
-  SERVICE: 'my-service' # TODO: update to your service name
-  WORKLOAD_IDENTITY_PROVIDER: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider' # TODO: update to your workload identity provider
+  SERVICE: 'gcp-cloud-run-docker' # TODO: update to your service name
 
 jobs:
   deploy:
@@ -60,7 +59,8 @@ jobs:
         name: 'Authenticate to Google Cloud'
         uses: 'google-github-actions/auth@f112390a2df9932162083945e46d439060d66ec2' # google-github-actions/auth@v2
         with:
-          workload_identity_provider: '${{ env.WORKLOAD_IDENTITY_PROVIDER }}'
+          workload_identity_provider: '${{ secrets.WIF_PROVIDER }}'
+          service_account: '${{ secrets.SA_EMAIL }}'
 
       # BEGIN - Docker auth and build
       #
