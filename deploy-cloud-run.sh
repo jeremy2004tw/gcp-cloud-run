@@ -28,13 +28,13 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
 	--member=user:$(gcloud config get-value account) \
 	--role='roles/run.invoker'
 
-gcloud run services add-iam-policy-binding gcp-cloud-run2 \
+gcloud run services add-iam-policy-binding gcp-cloud-run \
     --member="allUsers" \
     --role="roles/run.invoker" \
     --region=$REGION
 
 # Deploy the application to Cloud Run
-gcloud run deploy gcp-cloud-run2 \
+gcloud run deploy gcp-cloud-run \
 	--service-account=gcp-cloud-run-sa@$PROJECT_ID.iam.gserviceaccount.com \
 	--no-allow-unauthenticated \
   --region=$REGION \
@@ -42,12 +42,12 @@ gcloud run deploy gcp-cloud-run2 \
 
 # Get the service URL
 # SERVICE_URL=$( \
-#   gcloud run services describe gcp-cloud-run2 \
+#   gcloud run services describe gcp-cloud-run \
 #   --platform managed \
 #   --region $REGION \
 #   --format "value(status.url)" \
 # )
-export SERVICE_URL=https://gcp-cloud-run2-79495184008.us-central1.run.app
+export SERVICE_URL=https://gcp-cloud-run-79495184008.us-central1.run.app
 echo $SERVICE_URL
 
 # Call the application
