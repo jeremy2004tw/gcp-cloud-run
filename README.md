@@ -53,3 +53,31 @@ tf-gcp-wif-demo
 [github.com/vishal-bulbule/tf-gcp-wif-demo](https://github.com/vishal-bulbule/tf-gcp-wif-demo)
 
 --
+
+How to Set Up Continuous Deployment to Cloud Run Using GitHub Actions
+
+[oneuptime.com/blog/post/2026-02-17-how-to-set-up-continuous-deployment-to-cloud-run-using-github-actions-and-workload-identity-federation/view](https://oneuptime.com/blog/post/2026-02-17-how-to-set-up-continuous-deployment-to-cloud-run-using-github-actions-and-workload-identity-federation/view)
+
+How I Set Up a Full CI/CD Pipeline with Docker, GitHub Actions, and Google Cloud Run
+
+[dev.to/josueize/how-i-set-up-a-full-cicd-pipeline-with-docker-github-actions-and-google-cloud-run-3o72](https://dev.to/josueize/how-i-set-up-a-full-cicd-pipeline-with-docker-github-actions-and-google-cloud-run-3o72)
+
+Deploying Docker Containers to Google Cloud Run: A Production-Ready Guide
+
+[medium.com/@akaashhazarika/deploying-docker-containers-to-google-cloud-run-a-production-ready-guide-bdd6d5a7a453](https://medium.com/@akaashhazarika/deploying-docker-containers-to-google-cloud-run-a-production-ready-guide-bdd6d5a7a453)
+
+Containerize and Deploy Your First App on Cloud Run
+
+[medium.com/@yunandarpalilati/containerize-and-deploy-your-first-app-on-cloud-run-ab38c809b291](https://medium.com/@yunandarpalilati/containerize-and-deploy-your-first-app-on-cloud-run-ab38c809b291)
+
+Hosting a website on Google Cloud using Cloud Run
+
+[medium.com/google-cloud/hosting-a-website-on-google-cloud-using-cloud-run-a65343a98fce](https://medium.com/google-cloud/hosting-a-website-on-google-cloud-using-cloud-run-a65343a98fce)
+
+How to use GitHub Actions to deploy your Docker image to Google Cloud
+
+[medium.com/@rasmus-haapaniemi/how-to-use-github-actions-to-deploy-your-docker-image-to-google-cloud-96515edfb689](https://medium.com/@rasmus-haapaniemi/how-to-use-github-actions-to-deploy-your-docker-image-to-google-cloud-96515edfb689)
+
+Streamlining CI/CD for Cloud Run with GitHub Actions and Terraform
+
+[medium.com/@pawansenapati1999/streamlining-ci-cd-for-cloud-run-with-github-actions-and-terraform-c628092b86e0](https://medium.com/@pawansenapati1999/streamlining-ci-cd-for-cloud-run-with-github-actions-and-terraform-c628092b86e0)
