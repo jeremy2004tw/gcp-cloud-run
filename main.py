@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request
 
 app = Flask(__name__)
@@ -9,7 +10,5 @@ def hello():
     return f"Hello {who}!\n"
 
 if __name__ == "__main__":
-    # Development only: run "python main.py" and open http://localhost:8080
-    # When deploying to Cloud Run, a production-grade WSGI HTTP server,
-    # such as Gunicorn, will serve the app.
-    app.run(host="localhost", port=8080, debug=True)
+    port = int(os.environ.get("PORT", "8080"))
+    app.run(host="0.0.0.0", port=port, debug=False, use_reloader=False)

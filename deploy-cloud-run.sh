@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 
-# gcloud auth login
-# gcloud auth application-default login
+gcloud auth login
+gcloud auth application-default login
 
 export PROJECT_ID=$(gcloud config get-value project)
 # export PROJECT_ID="terraform-demo-504200"
@@ -28,17 +28,17 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
 	--member=user:$(gcloud config get-value account) \
 	--role='roles/run.invoker'
 
-gcloud run services add-iam-policy-binding gcp-cloud-run \
-    --member="allUsers" \
-    --role="roles/run.invoker" \
-    --region=$REGION
-
 # Deploy the application to Cloud Run
 gcloud run deploy gcp-cloud-run \
 	--service-account=gcp-cloud-run-sa@$PROJECT_ID.iam.gserviceaccount.com \
 	--no-allow-unauthenticated \
   --region=$REGION \
   --source .
+
+gcloud run services add-iam-policy-binding gcp-cloud-run \
+    --member="allUsers" \
+    --role="roles/run.invoker" \
+    --region=$REGION
 
 # Get the service URL
 # SERVICE_URL=$( \

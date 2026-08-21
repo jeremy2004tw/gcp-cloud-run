@@ -1,23 +1,23 @@
 
 # Create a Repository
-gcloud artifacts repositories create my-app-repo \
+gcloud artifacts repositories create gcp-cloud-run-docker \
   --repository-format=docker \
   --location=us-central1 \
-  --description="Docker repository for my application"
+  --description="Docker repository for gcp-cloud-run-docker"
 
 # Build and Tag the Image
 # Configure Docker authentication
 gcloud auth configure-docker us-central1-docker.pkg.dev
 
 # Build the image with a production-ready tag
-docker build -t us-central1-docker.pkg.dev/YOUR_PROJECT_ID/my-app-repo/my-app:1.0.0 .
+docker build -t us-central1-docker.pkg.dev/YOUR_PROJECT_ID/gcp-cloud-run-docker/my-app:1.0.0 .
 
 # Push the Image
-docker push us-central1-docker.pkg.dev/YOUR_PROJECT_ID/my-app-repo/my-app:1.0.0
+docker push us-central1-docker.pkg.dev/YOUR_PROJECT_ID/gcp-cloud-run-docker/my-app:1.0.0
 
 # Deploy to Google Cloud Run
 gcloud run deploy my-app-service \
-  --image=us-central1-docker.pkg.dev/YOUR_PROJECT_ID/my-app-repo/my-app:1.0.0 \
+  --image=us-central1-docker.pkg.dev/YOUR_PROJECT_ID/gcp-cloud-run-docker/my-app:1.0.0 \
   --platform=managed \
   --region=us-central1 \
   --allow-unauthenticated
